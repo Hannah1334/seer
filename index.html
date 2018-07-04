@@ -1,0 +1,662 @@
+<script>resizeTo(screen.availWidth, screen.availHeight);</script>
+
+<style>
+body{
+background-color:#999999;
+background-image: url('') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track-piece { background-color: #999999; }
+::-webkit-scrollbar-thumb:vertical {
+width: 1px;
+border: 2px solid #666666;
+background-color: #ffffff;
+}
+
+#topline {
+position:absolute;
+background-color:#333333;
+border-top:2px solid #ffffff;
+width:100%;
+height:2%;
+left:0%;
+top:42%;
+}
+
+#bigline {
+position:absolute;
+background-color:#000000;
+border-top:2px dashed #ffffff;
+border-bottom:2px dashed #ffffff;
+width:100%;
+height:10%;
+left:0%;
+top:45%;
+}
+
+#bottomline1 {
+position:absolute;
+background-color:#ffffff;
+width:100%;
+height:0.5%;
+left:0%;
+top:56.5%;
+}
+
+#bottomline2 {
+position:absolute;
+background-color:#666666;
+width:100%;
+height:2%;
+left:0%;
+top:58%;
+}
+
+#whitemage {
+position:absolute;
+background-image: url('http://i.imgur.com/4x51L0m.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:contain;
+width:30%;
+height:80%;
+top:10%;
+left:2%;
+}
+
+#bigbox {
+position:absolute;
+background-color:#cccccc;
+border:2px solid #000000;
+padding:2%;
+width:40%;
+height:60%;
+left:35%;
+top:17%;
+}
+
+#title {
+position:absolute;
+background-color:#666666;
+border:2px solid #000000;
+width:34%;
+left:40%;
+height:8%;
+top:13%;
+color:#ffffff;
+font-size:5vh;
+line-height:1.55;
+text-align:center;
+font-family: 'IM Fell English SC', serif;
+letter-spacing:5px;
+}
+
+#content {
+position:relative;
+padding:2%;
+overflow:auto;
+width:90%;
+height:86%;
+top:5%;
+left:3%;
+color:#000000;
+font-family: 'Vollkorn', serif;
+font-size:1.1vh;
+}
+
+#bigtabbox {
+position:absolute;
+background-color:#cccccc;
+border:2px solid #000000;
+width:33%;
+left:40.5%;
+height:8%;
+top:82%;
+}
+
+#tabbox1 {
+position:absolute;
+border:2px solid #666666;
+background-color:#333333;
+padding:1%;
+width:14%;
+height:30%;
+top:20.5%;
+left:3.5%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1:hover {
+border:2px solid #999999;
+background-color:#666666;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2 {
+position:absolute;
+border:2px solid #666666;
+background-color:#333333;
+padding:1%;
+width:14%;
+height:30%;
+top:20.5%;
+left:22.5%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2:hover {
+border:2px solid #999999;
+background-color:#666666;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3 {
+position:absolute;
+border:2px solid #666666;
+background-color:#333333;
+padding:1%;
+width:14%;
+height:30%;
+top:20.5%;
+left:41.5%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3:hover {
+border:2px solid #999999;
+background-color:#666666;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4 {
+position:absolute;
+border:2px solid #666666;
+background-color:#333333;
+padding:1%;
+width:14%;
+height:30%;
+top:20.5%;
+left:60.5%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4:hover {
+border:2px solid #999999;
+background-color:#666666;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5 {
+position:absolute;
+border:2px solid #666666;
+background-color:#333333;
+padding:1%;
+width:14%;
+height:30%;
+top:20.5%;
+left:79.5%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5:hover {
+border:2px solid #999999;
+background-color:#666666;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs {
+display:block;
+width:100%;
+height:100%;
+text-align:center;
+color:#ffffff;
+font-family: 'IM Fell English SC', serif;
+text-transform:uppercase;
+font-size:2vh;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs:hover {
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tab1,#tab2,#tab3,#tab4,#tab5 {
+display: none;
+}
+
+#pic1 {
+position:absolute;
+width:30%;
+height:40%;
+top:5%;
+left:68%;
+background-image: url('https://i.imgur.com/KLPrgIM.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:contain;
+}
+
+#pic2 {
+position:absolute;
+width:30%;
+height:40%;
+top:50%;
+left:2%;
+background-image: url('https://i.imgur.com/n9yMdih.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:contain;
+}
+
+#pic3 {
+position:absolute;
+width:30%;
+height:40%;
+top:7%;
+left:35%;
+background-image: url('https://i.imgur.com/pLmnjjD.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:contain;
+}
+
+#pic4 {
+position:absolute;
+width:30%;
+height:100%;
+top:0%;
+left:0%;
+background-image: url('https://i.imgur.com/pKXM8aC.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:contain;
+}
+
+#pic5 {
+position:absolute;
+width:30%;
+height:40%;
+top:4%;
+left:2%;
+background-image: url('https://i.imgur.com/pKHM8p1.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:contain;
+}
+
+#pic6 {
+position:absolute;
+width:30%;
+height:40%;
+top:4%;
+left:2%;
+background-image: url('https://i.imgur.com/GBBZAqc.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:contain;
+}
+
+#pic7 {
+position:absolute;
+width:30%;
+height:40%;
+top:4%;
+left:2%;
+background-image: url('https://i.imgur.com/sQkg2qU.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:contain;
+}
+
+#text1 {
+position:absolute;
+width:60%;
+height:37%;
+top:5%;
+left:4%;
+}
+
+#text2 {
+position:absolute;
+width:61%;
+height:45%;
+top:50%;
+left:35%;
+}
+
+#text3 {
+position:absolute;
+width:92%;
+height:30%;
+top:95%;
+left:4%;
+}
+
+#text4 {
+position:absolute;
+width:92%;
+height:50%;
+top:50%;
+left:4%;
+}
+
+#text5 {
+position:absolute;
+width:60%;
+height:90%;
+top:5%;
+left:35%;
+}
+
+#text6 {
+position:absolute;
+width:61%;
+height:42%;
+top:4%;
+left:35%;
+}
+
+#text7 {
+position:absolute;
+width:92%;
+height:44%;
+top:54%;
+left:4%;
+}
+
+#text8 {
+position:absolute;
+width:61%;
+height:42%;
+top:4%;
+left:35%;
+}
+
+#text9 {
+position:absolute;
+width:92%;
+height:44%;
+top:54%;
+left:4%;
+}
+
+#text10 {
+position:absolute;
+width:61%;
+height:42%;
+top:4%;
+left:35%;
+}
+
+#text11 {
+position:absolute;
+width:92%;
+height:44%;
+top:54%;
+left:4%;
+}
+
+#smalldash1 {
+position:absolute;
+border-top:2px dashed #000000;
+width:40%;
+left:4%;
+top:45%;
+}
+
+#smalldash2 {
+position:absolute;
+border-left:2px dashed #000000;
+height:80%;
+left:30%;
+top:10%;
+}
+
+#smalldash3 {
+position:absolute;
+border-top:2px dashed #000000;
+width:80%;
+left:10%;
+top:50%;
+}
+
+#smalldash4 {
+position:absolute;
+border-top:2px dashed #000000;
+width:80%;
+left:10%;
+top:50%;
+}
+
+#smalldash5 {
+position:absolute;
+border-top:2px dashed #000000;
+width:80%;
+left:10%;
+top:50%;
+}
+
+#fancytext1 {
+position:absolute;
+width:40%;
+left:50%;
+top:43%;
+font-family: 'IM Fell English SC', serif;
+font-size:2vh;
+color:#333333;
+letter-spacing:2px;
+}
+
+#fancytext2 {
+position:absolute;
+width:50%;
+left:25%;
+top:3%;
+font-family: 'IM Fell English SC', serif;
+font-size:2vh;
+color:#333333;
+letter-spacing:2px;
+text-align:center;
+}
+
+#fancytext3 {
+position:absolute;
+width:50%;
+left:25%;
+top:45%;
+font-family: 'IM Fell English SC', serif;
+font-size:2vh;
+color:#333333;
+letter-spacing:2px;
+text-align:center;
+}
+
+h1 {
+color:#ffffff;
+border-left: 6px solid #555555;
+background-color: #888888;
+font-family: 'Vollkorn', serif;
+letter-spacing:5px;
+font-size:2vh;
+}
+
+b {
+color:#666666;
+font-family: 'IM Fell English SC', serif;
+text-transform:uppercase;
+}
+
+i {
+color:#ffffff;
+}
+
+a {
+color:#ffffff;
+}
+</style>
+
+<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), progress !important;}</style>
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC|Vollkorn" rel="stylesheet">
+<script>function changeNavigation(id) {document.getElementById('content').innerHTML=document.getElementById(id).innerHTML}</script>
+
+<div id="topline"></div>
+<div id="bigline"></div>
+<div id="bottomline1"></div>
+<div id="bottomline2"></div>
+<div id="whitemage"></div>
+
+<div id="bigbox">
+<div id="content">
+<div id="pic1"></div>
+<div id="text1">
+<h1>Basic Information</h1>
+<b>Name:</b> Zad'i ("Zaw - Dee")<br>
+<b>Age:</b> Mid Thirties<br>
+<b>Birthdate:</b> Sixth of Destroyer's Rule<br>
+<b>Gender:</b> Female<br>
+<b>Sexuality:</b> Heterosexual<br>
+<b>Species:</b> Human<br>
+<b>Race:</b> Kre'Nathian<br>
+<b>Occupation:</b> General's Personal Assistant<br>
+<b>Height:</b> 5'6"<br>
+<b>Weight:</b> 120 lbs.
+</div>
+<div id="smalldash1"></div>
+<div id="fancytext1">❝I vow to protect you...❞</div>
+<div id="pic2"></div>
+<div id="text2">
+<h1>Appearance</h1>
+A rather petite individual, even for someone trained in the art of battle Zad’i is fairly small. Her entire physique at a glance seems to support the “weak feminine” stereotype while in actuality strong muscle is packed tight under her dark skin. Even though there doesn’t seem to be much to her frame the trademark female hourglass figure still takes dominance, shaping her well with the additions of full breasts and a shapely rear to match. The girl’s facial features are more rounded and soft, full lips often naturally resting slightly upturned in an easy kind hearted smile. Zad’i has typical coloring for a Kre’Nathian native, with very dark brown eyes and long thick black hair. Rather than manifest an aura when using her magic, her hair immediately turns stark white and her eyes shift into a dull grey over time (assuming she is continuously channeling mana for extended periods in reference to her eyes specifically; it is more common to see them stick into a bright gold phase when transitioning from their usual deep brown).
+</div>
+<div id="text3">
+<h1>Personality</h1>
+Fiercely loyal, or so most are led to believe. There isn’t much the typical person sees of Zad’i’s behavior other than how she acts while working. Trained with a soldier’s mindset, most of her own desires and behavioral quirks are shoved to the side, a mask of submission worn when needed, replaced easily by the quick thinking and directiveness of a leader if a situation calls for her to be. She is very observant and retains information in her short term memory very well, especially when writing notes or organizing things together for her boss. Underneath all of that is a stubborn headstrong woman who does as she pleases regardless of the opinions of others--when it won’t put her job on the line, of course.
+</div>
+<br><br>
+</div>
+</div>
+<div id="title">
+The White Auror
+</div>
+<div id="bigtabbox">
+<div id="tabbox1">
+<span class="tabs" onClick="changeNavigation ('tab1')">I.</span>
+</div>
+<div id="tabbox2">
+<span class="tabs" onClick="changeNavigation ('tab2')">II.</span>
+</div>
+<div id="tabbox3">
+<span class="tabs" onClick="changeNavigation ('tab3')">III.</span>
+</div>
+<div id="tabbox4">
+<span class="tabs" onClick="changeNavigation ('tab4')">IV.</span>
+</div>
+<div id="tabbox5">
+<span class="tabs" onClick="changeNavigation ('tab5')">V.</span>
+</div>
+</div>
+
+<div id="tab1">
+<div id="fancytext2">
+❝I tend to her flowers...
+</div>
+<div id="pic3">
+</div>
+<div id="fancytext3">
+...Father says it is my duty.❞
+</div>
+<div id="text4">
+<h1>An Auror's Upbringing</h1>
+Born to a lower upper class family, Zad’i was brought into a world filled with high expectations. Her mother was an official Healer, hired by the Kre’Nathian government as a legitimate doctor, while her father was the former decorated General. A proud and very patriotic man who wanted nothing more than to have a son to someday see succeed serving his country under the military just like his old man. Unfortunately her mother was too frail a creature, and after birthing him a daughter became unable to healthily produce any more children for him. Still a good father, he loved his child more than anything, but the disappointment he felt was unintentionally projected onto her ever since she got old enough to start taking care of herself and things around her even to the most basic and simplest degree. 
+<br><br>
+The young tyke was very ambitious, always looking up to her father, head filled with the compliments from his underlings and admirers. Her mother contributed to her fantasies just as much, painting him as a heroic figure in her mind. Zad’i wanted more than anything to follow in his footsteps, but whenever the subject was ever brought up he always directed her back to her mother’s garden, insisting her place was to tend to herbs and heal the sick. When she finally came of age to start learning magic, it was insisted upon by her parents that Faith would be her primary. Unable to go against their wishes she did as they wanted, but was stubborn enough to study battlemage and battlemedic tactics in secret. Hitting the books was one thing, but it soon became clear that she’d need some real hands on training. A dear friend of hers, and one of her father’s best soldiers, believed in her cause and promised to keep her secret. He agreed to teach her, and the two worked together, forming a powerful cliche bond of friendship.
+<br><br>
+Upon reaching the early stages of her adulthood, the tragedy of her father’s death drove a nail through her and her mother’s hearts. They took solace in the fact that he passed honorably, decorated as a hero. Zad’i’s mother buried herself in her work, but her ambitious daughter stopped hiding her true intentions and began following in her father’s footsteps, finally achieving her dream of joining the military herself. The good friend that devoted so much time into her development as a warrior ended up being promoted to take the previous General’s place, and she eventually found herself in the position of his personal and most trusted assistant.
+</div>
+</div>
+
+<div id="tab2">
+<div id="pic4">
+</div>
+<div id="smalldash2"></div>
+<div id="text5">
+<h1>Inventory</h1>
+<b>Battle Armor</b><br>
+A set of ornate and clearly feminine armor, every single piece as white as snow. Even the metal platings are stained and polished to shine such a pale silver it’s pretty much white. The Kre’Nathian flare of overwhelmingly ornate aesthetic still remains, even if the pallet isn’t necessarily very colorful. Opal-like gems cover the getup, surrounded by swirling vine-like sigils and framed beautifully by the curvature and decorative shapes far too wealthy to be mistaken as belonging to any common soldier. Most of the attire is a very special kind of heavy duty fabric, intended to keep the wearer cool even under the blazing summer sun’s intense natural heat. It is stylistically designed into a slim fitting dress with long tight sleeves that eventually fluffs out into quite the skirt, stretching only to the woman’s knees. Her shoulders, chest, upper back, arms, and elbows are all intentionally protected by the strange white metal (cobalt durability) and the alloy was even used to fashion a nice belt piece, as well as a pair of metal heeled boots that stretch almost up to her mid thigh, providing some protection to her feet and her knees.
+<br>
+When on the job she usually wears a fancy feathered chromatic helmet that matches the rest of her armor in design, but if she is wearing it ceremoniously or when working off the battlefield she trades it for a very floppy white wizard’s hat.
+<br><br>
+<b>*** (High Auror Medium)</b><br>
+Work in progress
+</div>
+</div>
+
+<div id="tab3">
+<div id="pic5">
+</div>
+<div id="text6">
+<h1>Faith (High Auror)</h1>
+<i>"Faith mages are a completely support-oriented group of mages. Those who practice Faith hold the ability to mend wounds, lift curses and illnesses, bestow temporary magical boons to their allies, or create Holy Equipment which provide a permanent boon. Faith mages are also highly skilled in defensive arts, and are capable of erecting magical barriers. However, faith mana is completely non hostile, and no faith spell can ever cause harm to another being (unless faith magic specifically harms them)."</i>
+</div>
+<div id="smalldash3"></div>
+<div id="text7">
+<h1>Spells</h1>
+Work in progress
+</div>
+</div>
+
+<div id="tab4">
+<div id="pic6"></div>
+<div id="text8">
+<h1>Psionics (Expert Mage)</h1>
+<i>"A tree of magic that amplifies the power of one’s mind. Psionic mages can achieve sensory feats such as telekinetics, mental communication, as well as high level detection and hyperawareness spells that allow them to gain extra information about people and the environment around them. Highly skilled users of the Psionic tree can achieve (EXTREMELY LIMITED) future vision, small scale possession and bodily control of others. Upon reaching expert mage, Psionic mages achieve the ability to spirit walk, a technique that allows them to astral project their consciousness and leave their bodies behind. Spirit walking mages can pass through most physical objects (unless infused with magic etc.) and remain undetected (unless spotted by certain sensory spells) as they roam. The physical body stays in one place as this happens, but once the spirit walker wishes to reconnect with their form, the body will transport to wherever the consciousness may be."</i>
+</div>
+<div id="smalldash4"></div>
+<div id="text9">
+<h1>Spells</h1>
+Work in progress
+</div>
+</div>
+
+<div id="tab5">
+<div id="pic7"></div>
+<div id="text10">
+<h1>Bardism (Mage)</h1>
+<i>"Although music is a beautiful expression of art, the proper mage may cause it to become something much more. Bard's have the ability to convert music into powerful spells, focused primarily on buffing and (slight) healing. However, at higher levels Bardism can certainly do heavy damage, with a particular strength in sound based attacks."</i>
+</div>
+<div id="smalldash5"></div>
+<div id="text11">
+<h1>Spells</h1>
+Work in progress
+</div>
+</div>
+
+<embed style="height: 0%; width: 0%;"src="Zad'i.mp3" autostart="true" loop="true">
